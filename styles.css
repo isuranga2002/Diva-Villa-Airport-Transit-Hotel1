@@ -1842,3 +1842,59 @@ section { padding: clamp(80px, 11vw, 160px) 0; position: relative; }
   .rrb-score { font-size: 36px; }
   .reviews-carousel { animation-duration: 40s; }
 }
+
+/* ========== KAYAK TRAVEL AWARD ========== */
+.hero-award-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 6px;
+  background: rgba(15,45,82,.65);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.hero-award-link:hover { background: var(--c-blue-deep); }
+.kayak-award { padding: 52px 0 0; scroll-margin-top: 96px; }
+.kayak-award-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 36px;
+  padding: 36px;
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-top: 3px solid #ff690f;
+  border-radius: var(--r-md);
+}
+.kayak-award-badge { display: block; width: 150px; }
+.kayak-award-badge img { width: 150px; height: 150px; }
+.kayak-award-copy .eyebrow { font-size: 10px; letter-spacing: .16em; }
+.kayak-award-copy h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px,3.2vw,44px);
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--c-blue-deep);
+  margin: 12px 0 16px;
+}
+.kayak-award-copy p { max-width: 64ch; font-size: 14px; line-height: 1.8; color: var(--c-ink-2); }
+.kayak-award-copy .kayak-award-thanks { margin-top: 10px; font-size: 12px; color: #586170; }
+.kayak-award-cta { display: inline-flex; align-items: center; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--c-blue); color: var(--c-blue); font-size: 13px; font-weight: 700; }
+.kayak-award-cta:hover { color: var(--c-blue-deep); }
+.hero-award-link:focus-visible, .kayak-award-badge:focus-visible, .kayak-award-cta:focus-visible { outline: 3px solid #ff690f; outline-offset: 5px; }
+.kayak-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) {
+  .kayak-award-card { grid-template-columns: 150px minmax(0,1fr); gap: 24px; }
+  .kayak-award-cta { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 600px) {
+  .kayak-award { padding-top: 32px; }
+  .kayak-award-card { grid-template-columns: minmax(0,1fr); padding: 28px 22px; gap: 24px; }
+  .kayak-award-cta { grid-column: 1; }
+  .kayak-award-copy h2 { font-size: 34px; }
+}
